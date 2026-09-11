@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Order — Velvet &amp; Crumb Artisan Bakery</title>
+  <meta name="description" content="How to order from Velvet & Crumb. Four simple steps, pickup and delivery options, and payment by cash or Mobile Money.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo" aria-label="Velvet and Crumb — home">
+        <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <circle cx="20" cy="20" r="19" fill="none" stroke="#B08D57" stroke-width="1.5"/>
+          <path d="M12 26c2-8 6-12 8-12s6 4 8 12" fill="none" stroke="#1B3A2F" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="20" cy="15" r="2" fill="#B08D57"/>
+        </svg>
+        <span class="logo__text">
+          Velvet &amp; Crumb
+          <small>Artisan Bakery</small>
+        </span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="menu.html">Menu</a></li>
+          <li><a class="primary-nav__link" href="custom-cakes.html">Custom Cakes</a></li>
+          <li><a class="primary-nav__link" href="how-to-order.html" aria-current="page">How to Order</a></li>
+          <li><a class="primary-nav__link" href="about.html">About</a></li>
+          <li><a class="primary-nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="cart-button" id="cart-toggle"
+                aria-label="Open cart, 0 items" aria-controls="cart-panel" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="20" r="1.4"/>
+            <circle cx="18" cy="20" r="1.4"/>
+            <path d="M2 3h3l2.4 12.2a1.8 1.8 0 0 0 1.8 1.4h8.4a1.8 1.8 0 0 0 1.8-1.4L21 7H6"/>
+          </svg>
+          <span class="cart-count" id="cart-count" hidden>0</span>
+        </button>
+
+        <a class="btn-whatsapp"
+           href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20I%27d%20like%20to%20place%20an%20order."
+           target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/>
+          </svg>
+          <span>Order on WhatsApp</span>
+        </a>
+
+        <button type="button" class="menu-toggle" id="menu-toggle"
+                aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+               stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== PAGE HEADER ===================== -->
+    <header class="page-header">
+      <div class="container">
+        <span class="page-header__eyebrow">Four Simple Steps</span>
+        <h1 class="page-header__title">How to Order</h1>
+        <p class="page-header__intro">
+          No accounts, no checkout forms, no waiting for confirmation emails. Browse, add to cart, and send us your order on WhatsApp.
+        </p>
+        <p class="page-header__cta">
+          <a href="menu.html" class="btn btn--solid">Browse the Menu</a>
+        </p>
+      </div>
+    </header>
+
+    <!-- ===================== FOUR STEPS ===================== -->
+    <section class="how-steps" aria-labelledby="how-steps-heading">
+      <h2 class="visually-hidden" id="how-steps-heading">Ordering steps</h2>
+      <div class="container">
+
+        <ol class="how-steps__list">
+
+          <li class="how-step">
+            <span class="how-step__number" aria-hidden="true">1</span>
+            <div class="how-step__content">
+              <h3 class="how-step__title">Browse and add to cart</h3>
+              <p class="how-step__text">
+                Visit the menu and add anything you&rsquo;d like to your cart. You can adjust quantities, remove items, and add more before you send.
+              </p>
+              <p class="how-step__text">
+                Ordering just one item? Each product also has a direct <strong>Order on WhatsApp</strong> path &mdash; no cart needed.
+              </p>
+            </div>
+          </li>
+
+          <li class="how-step">
+            <span class="how-step__number" aria-hidden="true">2</span>
+            <div class="how-step__content">
+              <h3 class="how-step__title">Send your order on WhatsApp</h3>
+              <p class="how-step__text">
+                Click <strong>Send order on WhatsApp</strong> inside the cart. WhatsApp opens with your items, quantities, and the guide total already written out. Add your name, pickup or delivery, and any notes, then press send.
+              </p>
+              <span class="how-step__hint">The guide total is not final &mdash; we confirm the real total in chat.</span>
+            </div>
+          </li>
+
+          <li class="how-step">
+            <span class="how-step__number" aria-hidden="true">3</span>
+            <div class="how-step__content">
+              <h3 class="how-step__title">We confirm everything</h3>
+              <p class="how-step__text">
+                Within business hours, we&rsquo;ll reply to confirm availability, the final total, and a pickup or delivery time that works for you.
+              </p>
+              <p class="how-step__text">
+                If something you ordered is sold out, we&rsquo;ll suggest a similar item or a different day. Nothing is charged until you confirm.
+              </p>
+            </div>
+          </li>
+
+          <li class="how-step">
+            <span class="how-step__number" aria-hidden="true">4</span>
+            <div class="how-step__content">
+              <h3 class="how-step__title">Pay and collect</h3>
+              <p class="how-step__text">
+                Pay by cash on pickup, or by Mobile Money before collection. Full details are sent to you in the WhatsApp chat.
+              </p>
+              <p class="how-step__text">
+                Delivery orders are paid the same way, before the courier leaves.
+              </p>
+            </div>
+          </li>
+
+        </ol>
+
+        <div class="quick-order">
+          <p class="quick-order__text">
+            <strong>Ordering just one thing?</strong> Skip the cart &mdash; tap the WhatsApp button and tell us what you&rsquo;d like.
+          </p>
+          <a class="btn btn--whatsapp"
+             href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20I%27d%20like%20to%20order%3A%20"
+             target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/>
+            </svg>
+            Order on WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== PICKUP & DELIVERY ===================== -->
+    <section class="fulfilment-section" aria-labelledby="fulfilment-heading">
+      <div class="container">
+
+        <header class="fulfilment-section__header">
+          <span class="fulfilment-section__eyebrow">Pickup &amp; Delivery</span>
+          <h2 class="fulfilment-section__title" id="fulfilment-heading">How your order reaches you</h2>
+          <p class="fulfilment-section__subtitle">
+            Both options are confirmed with you in WhatsApp before your order is finalised.
+          </p>
+        </header>
+
+        <div class="fulfilment-table-wrap">
+          <table class="fulfilment-table">
+            <caption>Pickup and delivery options at a glance</caption>
+            <thead>
+              <tr>
+                <th scope="col">&nbsp;</th>
+                <th scope="col">Pickup</th>
+                <th scope="col">Delivery</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Area</th>
+                <td>142 Maple Street</td>
+                <td>Downtown district, within 5 km</td>
+              </tr>
+              <tr>
+                <th scope="row">Fee</th>
+                <td>Free</td>
+                <td>$8 flat</td>
+              </tr>
+              <tr>
+                <th scope="row">Free over</th>
+                <td>&mdash;</td>
+                <td>$75</td>
+              </tr>
+              <tr>
+                <th scope="row">Minimum order</th>
+                <td>None</td>
+                <td>$30</td>
+              </tr>
+              <tr>
+                <th scope="row">Notice</th>
+                <td>24 hours</td>
+                <td>24 hours</td>
+              </tr>
+              <tr>
+                <th scope="row">Time window</th>
+                <td>During business hours</td>
+                <td>9:00 AM &ndash; 2:00 PM</td>
+              </tr>
+              <tr>
+                <th scope="row">Rush orders</th>
+                <td>Same-day, via WhatsApp only</td>
+                <td>Not available</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== PAYMENT ===================== -->
+    <section class="payment-section" aria-labelledby="payment-heading">
+      <div class="container">
+
+        <header class="payment-section__header">
+          <span class="payment-section__eyebrow">Payment</span>
+          <h2 class="payment-section__title" id="payment-heading">Two ways to pay</h2>
+          <p class="payment-section__subtitle">
+            Payment is always arranged in WhatsApp. This website never processes your payment.
+          </p>
+        </header>
+
+        <div class="payment-cards">
+
+          <article class="payment-card">
+            <div class="payment-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="6" width="20" height="12" rx="2"/>
+                <circle cx="12" cy="12" r="2.5"/>
+                <path d="M6 10v4M18 10v4"/>
+              </svg>
+            </div>
+            <h3 class="payment-card__title">Cash on pickup</h3>
+            <p class="payment-card__text">
+              The simplest option. Pay in person when you collect your order. <strong>Exact change appreciated</strong> but not required.
+            </p>
+          </article>
+
+          <article class="payment-card">
+            <div class="payment-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2"/>
+                <path d="M12 18h.01"/>
+              </svg>
+            </div>
+            <h3 class="payment-card__title">Mobile Money</h3>
+            <p class="payment-card__text">
+              Send payment before collection or delivery. <strong>Details are shared in your WhatsApp chat</strong> once your order is confirmed.
+            </p>
+          </article>
+
+        </div>
+
+        <p class="payment-section__note">
+          <strong>No payment on this website.</strong> We don&rsquo;t take card details, hold card details, or process payments online. Everything happens either in person or through Mobile Money.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ===================== LEAD TIMES + NOTES ===================== -->
+    <section class="lead-times" aria-labelledby="lead-times-heading">
+      <div class="container">
+
+        <header class="lead-times__header">
+          <h2 class="lead-times__title" id="lead-times-heading">How far ahead to order</h2>
+          <p class="lead-times__subtitle">
+            Most items need a little notice so we can bake them fresh for you.
+          </p>
+        </header>
+
+        <div class="lead-times__list">
+
+          <div class="lead-time">
+            <p class="lead-time__value">24h</p>
+            <p class="lead-time__label">Standard items</p>
+            <p class="lead-time__desc">Croissants, macarons, tarts, cakes, and espresso drinks.</p>
+          </div>
+
+          <div class="lead-time">
+            <p class="lead-time__value">7 days</p>
+            <p class="lead-time__label">Custom cakes</p>
+            <p class="lead-time__desc">Designed with you, from consultation to quote to collection.</p>
+          </div>
+
+          <div class="lead-time">
+            <p class="lead-time__value">72h</p>
+            <p class="lead-time__label">Catering platters</p>
+            <p class="lead-time__desc">Breakfast and dessert boxes for offices and events.</p>
+          </div>
+
+        </div>
+
+        <div class="order-notes">
+
+          <div class="order-note" role="note">
+            <svg class="order-note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 9v4"/>
+              <path d="M12 17h.01"/>
+              <path d="M10.3 3.86a2 2 0 0 1 3.4 0l7.5 13A2 2 0 0 1 19.5 20h-15a2 2 0 0 1-1.7-3.14l7.5-13z"/>
+            </svg>
+            <p class="order-note__text">
+              <strong>Allergen notice:</strong> Our kitchen handles wheat, dairy, eggs, nuts, and soy. While we take cross-contamination seriously, we cannot guarantee any item is completely free of these allergens. Full allergen information is on the <a href="menu.html#allergens">Menu page</a>.
+            </p>
+          </div>
+
+          <div class="order-note" role="note">
+            <svg class="order-note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            <p class="order-note__text" id="wa-troubleshoot">
+              <strong>WhatsApp didn&rsquo;t open?</strong> Some browsers block the app link. You can
+              <button type="button" class="copy-btn" id="copy-number" data-number="+233 20 913 3011">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="9" y="9" width="12" height="12" rx="2"/>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                </svg>
+                <span id="copy-number-label">Copy our number</span>
+              </button>
+              and send us a message directly. Or email <a href="mailto:velvet@me.com">velvet@me.com</a> and we&rsquo;ll reply the same day.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-brand__logo" aria-label="Velvet and Crumb — home">
+            <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+              <circle cx="20" cy="20" r="19" fill="none" stroke="#B08D57" stroke-width="1.5"/>
+              <path d="M12 26c2-8 6-12 8-12s6 4 8 12" fill="none" stroke="#FAF6EF" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="20" cy="15" r="2" fill="#B08D57"/>
+            </svg>
+            <span class="footer-brand__name">
+              Velvet &amp; Crumb
+              <small>Artisan Bakery</small>
+            </span>
+          </a>
+          <p class="footer-brand__blurb">
+            Handcrafted pastries, everyday luxuries. 48-hour fermented, baked fresh each morning on Maple Street.
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer">
+          <h2 class="footer-heading">Explore</h2>
+          <ul class="footer-nav__list">
+            <li><a class="footer-nav__link" href="menu.html">Menu</a></li>
+            <li><a class="footer-nav__link" href="custom-cakes.html">Custom Cakes</a></li>
+            <li><a class="footer-nav__link" href="how-to-order.html">How to Order</a></li>
+            <li><a class="footer-nav__link" href="about.html">About</a></li>
+            <li><a class="footer-nav__link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="footer-heading">Visit &amp; Contact</h2>
+          <address class="footer-visit">
+            142 Maple Street<br>
+            Downtown district
+          </address>
+          <p class="footer-hours"><strong>Mon – Fri</strong>7:00 AM – 6:00 PM</p>
+          <p class="footer-hours"><strong>Sat – Sun</strong>8:00 AM – 3:00 PM</p>
+          <div class="footer-contact">
+            <a class="footer-contact__link" href="mailto:velvet@me.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              velvet@me.com
+            </a>
+            <a class="btn--whatsapp-sm"
+               href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20I%27d%20like%20to%20place%20an%20order."
+               target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+              Order on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <p class="footer-allergen">
+        <strong>Allergen notice:</strong> Our kitchen handles wheat, dairy, eggs, nuts, and soy. We cannot guarantee any item is completely free of these allergens.
+      </p>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="footer-year">2026</span> Velvet &amp; Crumb Artisan Bakery. All rights reserved.
+        </p>
+        <ul class="footer-legal">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/how-to-order.js"></script>
+</body>
+</html>

@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu — Velvet &amp; Crumb Artisan Bakery</title>
+  <meta name="description" content="Sourdough croissants, French macarons, fruit tarts, layer cakes, and specialty espresso. Baked fresh daily on Maple Street. Order on WhatsApp for pickup or delivery.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo" aria-label="Velvet and Crumb — home">
+        <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <circle cx="20" cy="20" r="19" fill="none" stroke="#B08D57" stroke-width="1.5"/>
+          <path d="M12 26c2-8 6-12 8-12s6 4 8 12" fill="none" stroke="#1B3A2F" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="20" cy="15" r="2" fill="#B08D57"/>
+        </svg>
+        <span class="logo__text">
+          Velvet &amp; Crumb
+          <small>Artisan Bakery</small>
+        </span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="menu.html" aria-current="page">Menu</a></li>
+          <li><a class="primary-nav__link" href="custom-cakes.html">Custom Cakes</a></li>
+          <li><a class="primary-nav__link" href="how-to-order.html">How to Order</a></li>
+          <li><a class="primary-nav__link" href="about.html">About</a></li>
+          <li><a class="primary-nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="cart-button" id="cart-toggle"
+                aria-label="Open cart, 0 items" aria-controls="cart-panel" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="20" r="1.4"/>
+            <circle cx="18" cy="20" r="1.4"/>
+            <path d="M2 3h3l2.4 12.2a1.8 1.8 0 0 0 1.8 1.4h8.4a1.8 1.8 0 0 0 1.8-1.4L21 7H6"/>
+          </svg>
+          <span class="cart-count" id="cart-count" hidden>0</span>
+        </button>
+
+        <a class="btn-whatsapp"
+           href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20I%27d%20like%20to%20place%20an%20order."
+           target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/>
+          </svg>
+          <span>Order on WhatsApp</span>
+        </a>
+
+        <button type="button" class="menu-toggle" id="menu-toggle"
+                aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+               stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== PAGE HEADER ===================== -->
+    <header class="page-header">
+      <div class="container">
+        <span class="page-header__eyebrow">Today&rsquo;s Counter</span>
+        <h1 class="page-header__title">Our Menu</h1>
+        <p class="page-header__intro">
+          Everything is baked fresh each morning. Availability shifts with the season and with what the local farms bring us.
+        </p>
+      </div>
+    </header>
+
+    <!-- ===================== FILTER BAR ===================== -->
+    <div class="filter-bar">
+      <div class="container">
+        <div class="filter-bar__inner">
+          <ul class="filter-bar__list" role="tablist" aria-label="Filter menu by category">
+            <li role="presentation">
+              <button type="button" class="filter-pill is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+            </li>
+            <li role="presentation">
+              <button type="button" class="filter-pill" data-filter="viennoiserie" role="tab" aria-selected="false">Viennoiserie</button>
+            </li>
+            <li role="presentation">
+              <button type="button" class="filter-pill" data-filter="tarts" role="tab" aria-selected="false">Tarts &amp; Galettes</button>
+            </li>
+            <li role="presentation">
+              <button type="button" class="filter-pill" data-filter="macarons" role="tab" aria-selected="false">Macarons</button>
+            </li>
+            <li role="presentation">
+              <button type="button" class="filter-pill" data-filter="cakes" role="tab" aria-selected="false">Cakes</button>
+            </li>
+            <li role="presentation">
+              <button type="button" class="filter-pill" data-filter="espresso" role="tab" aria-selected="false">Espresso</button>
+            </li>
+          </ul>
+          <p class="filter-count" aria-live="polite">
+            <span id="filter-count">12</span> items
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== PRODUCT GRID ===================== -->
+    <section class="menu-section" aria-label="Menu items">
+      <div class="container">
+        <div class="product-grid product-grid--dense" id="menu-grid">
+
+          <!-- 1. Sourdough Croissant -->
+          <article class="product-card" data-category="viennoiserie">
+            <div class="product-card__media">
+              <img class="product-card__image"
+                   src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=70"
+                   alt="Golden sourdough croissant with visible lamination" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Sourdough Croissant</h3>
+              <p class="product-card__desc">48-hour fermented, hand-laminated, baked golden each morning.</p>
+              <p class="product-card__price">$4.50</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn--add" data-add-to-cart="sourdough-croissant"
+                        aria-label="Add Sourdough Croissant to cart">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  Add to Cart
+                </button>
+                <a class="ask-link"
+                   href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20I%20have%20a%20question%20about%20the%20Sourdough%20Croissant."
+                   target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+                  Ask
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Vegan Sourdough Croissant -->
+          <article class="product-card" data-category="viennoiserie">
+            <div class="product-card__media">
+              <span class="product-card__badge product-card__badge--vegan">Vegan</span>
+              <img class="product-card__image"
+                   src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=600&q=70"
+                   alt="Vegan sourdough croissant, golden and flaked" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Vegan Sourdough Croissant</h3>
+              <p class="product-card__desc">Same slow fermentation, made with plant butter.</p>
+              <p class="product-card__price">$5.00</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn--add" data-add-to-cart="vegan-sourdough-croissant"
+                        aria-label="Add Vegan Sourdough Croissant to cart">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  Add to Cart
+                </button>
+                <a class="ask-link"
+                   href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20I%20have%20a%20question%20about%20the%20Vegan%20Sourdough%20Croissant."
+                   target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+                  Ask
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Pain au Chocolat -->
+          <article class="product-card" data-category="viennoiserie">
+            <div class="product-card__media">
+              <img class="product-card__image"
+                   src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=600&q=70"
+                   alt="Pain au chocolat with dark chocolate batons visible" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Pain au Chocolat</h3>
+              <p class="product-card__desc">Two batons of 70% dark chocolate wrapped in laminated dough.</p>
+              <p class="product-card__price">$5.25</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn--add" data-add-to-cart="pain-au-chocolat"
+                        aria-label="Add Pain au Chocolat to cart">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  Add to Cart
+                </button>
+                <a class="ask-link"
+                   href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20I%20have%20a%20question%20about%20the%20Pain%20au%20Chocolat."
+                   target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+                  Ask
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Twice-Baked Almond Cardamom Croissant -->
+          <article class="product-card" data-category="viennoiserie">
+            <div class="product-card__media">
+              <span class="product-card__badge">Bestseller</span>
+              <img class="product-card__image"
+                   src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=70"
+                   alt="Twice-baked almond cardamom croissant, golden and flaked" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Twice-Baked Almond Cardamom Croissant</h3>
+              <p class="product-card__desc">Our signature. Baked, filled with almond-cardamom cream, baked again.</p>
+              <p class="product-card__price">$6.50</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn--add" data-add-to-cart="cardamom-croissant"
+                        aria-label="Add Twice-Baked Almond Cardamom Croissant to cart">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  Add to Cart
+                </button>
+                <a class="ask-link"
+                   href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20I%20have%20a%20question%20about%20the%20Twice-Baked%20Almond%20Cardamom%20Croissant."
+                   target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+                  Ask
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Fruit Tart -->
+          <article class="product-card" data-category="tarts">
+            <div class="product-card__media">
+              <img class="product-card__image"
+                   src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&fit=crop&w=600&q=70"
+                   alt="Fruit tart with seasonal fruit on vanilla custard" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Fruit Tart</h3>
+              <p class="product-card__desc">Buttery shell, vanilla crème pâtissière, seasonal fruit.</p>
+              <p class="product-card__price">$7.50</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn--add" data-add-to-cart="fruit-tart"
+                        aria-label="Add Fruit Tart to cart">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  Add to Cart
+                </button>
+                <a class="ask-link"
+                   href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20I%20have%20a%20question%20about%20the%20Fruit%20Tart."
+                   target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+                  Ask
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Seasonal Galette -->
+          <article class="product-card" data-category="tarts">
+            <div class="product-card__media">
+              <span class="product-card__badge product-card__badge--vegan">Rotating</span>
+              <img class="product-card__image"
+                   src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&fit=crop&w=600&q=70"
+                   alt="Free-form seasonal galette with stone fruit" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Seasonal Galette</h3>
+              <p class="product-card__desc">Free-form tart featuring whatever the local farms are harvesting.</p>
+              <p class="product-card__price">$8.50</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn--add" data-add-to-cart="seasonal-galette"
+                        aria-label="Add Seasonal Galette to cart">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  Add to Cart
+                </button>
+                <a class="ask-link"
+                   href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20What%27s%20in%20today%27s%20Seasonal%20Galette%3F"
+                   target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+                  Ask
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Salted Caramel Espresso Macaron -->
+          <article class="product-card" data-category="macarons">
+            <div class="product-card__media">
+              <span class="product-card__badge">Bestseller</span>
+              <img class="product-card__image"
+                   src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&w=600&q=70"
+                   alt="Salted caramel espresso macaron with smooth ganache filling" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Salted Caramel Espresso Macaron</h3>
+              <p class="product-card__desc">Single macaron. Salted caramel ganache with a shot of espresso.</p>
+              <p class="product-card__price">$3.50 each</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn--add" data-add-to-cart="espresso-macaron"
+                        aria-label="Add Salted Caramel Espresso Macaron to cart">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  Add to Cart
+                </button>
+                <a class="ask-link"
+                   href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20I%20have%20a%20question%20about%20the%20Salted%20Caramel%20Espresso%20Macaron."
+                   target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+                  Ask
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Macaron Box (6) -->
+          <article class="product-card" data-category="macarons">
+            <div class="product-card__media">
+              <img class="product-card__image"
+                   src="https://images.unsplash.com/photo-1558326567-98ae2405596b?auto=format&fit=crop&w=600&q=70"
+                   alt="Box of six macarons in assorted colours" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Macaron Box (6)</h3>
+              <p class="product-card__desc">Six macarons — a rotating selection of our current flavours.</p>
+              <p class="product-card__price">$16.50</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn--add" data-add-to-cart="macaron-box-6"
+                        aria-label="Add Macaron Box to cart">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  Add to Cart
+                </button>
+                <a class="ask-link"
+                   href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20Which%20flavours%20are%20in%20today%27s%20Macaron%20Box%3F"
+                   target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+                  Ask
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. Signature Layer Cake -->
+          <article class="product-card" data-category="cakes">
+            <div class="product-card__media">
+              <img class="product-card__image"
+                   src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=70"
+                   alt="Slice of layered signature cake with smooth frosting" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Signature Layer Cake</h3>
+              <p class="product-card__desc">Whole cake, serves 8–10. Flavours rotate monthly.</p>
+              <p class="product-card__price">from $45.00</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn--add" data-add-to-cart="layer-cake"
+                        aria-label="Add Signature Layer Cake to cart">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  Add to Cart
+                </button>
+                <a class="ask-link"
+                   href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20What%27s%20this%20month%27s%20Signature%20Layer%20Cake%3F"
+                   target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+                  Ask
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. Gluten-Friendly Flourless Chocolate Cake -->
+          <article class="product-card" data-category="cakes">
+            <div class="product-card__media">
+              <span class="product-card__badge product-card__badge--gf">Gluten-Friendly</span>
+              <img class="product-card__image"
+                   src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=70"
+                   alt="Rich flourless chocolate cake with dusting of cocoa" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Gluten-Friendly Flourless Chocolate Cake</h3>
+              <p class="product-card__desc">Dense, rich, made with 70% dark chocolate. Whole cake, serves 8–10.</p>
+              <p class="product-card__price">from $42.00</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn--add" data-add-to-cart="flourless-chocolate-cake"
+                        aria-label="Add Gluten-Friendly Flourless Chocolate Cake to cart">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  Add to Cart
+                </button>
+                <a class="ask-link"
+                   href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20I%20have%20a%20question%20about%20the%20Flourless%20Chocolate%20Cake."
+                   target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+                  Ask
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11. Espresso / Cappuccino / Flat White -->
+          <article class="product-card" data-category="espresso">
+            <div class="product-card__media">
+              <img class="product-card__image"
+                   src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=600&q=70"
+                   alt="Espresso in a small white cup with crema" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Espresso / Cappuccino / Flat White</h3>
+              <p class="product-card__desc">Locally roasted beans, pulled to order. Choose your style in WhatsApp.</p>
+              <p class="product-card__price">$3.50</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn--add" data-add-to-cart="espresso"
+                        aria-label="Add Espresso drink to cart">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  Add to Cart
+                </button>
+                <a class="ask-link"
+                   href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20Which%20espresso%20drinks%20are%20available%20today%3F"
+                   target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+                  Ask
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12. Specialty Espresso Drink -->
+          <article class="product-card" data-category="espresso">
+            <div class="product-card__media">
+              <span class="product-card__badge product-card__badge--vegan">Rotating</span>
+              <img class="product-card__image"
+                   src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=600&q=70"
+                   alt="Specialty espresso drink with latte art" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Specialty Espresso Drink</h3>
+              <p class="product-card__desc">Ask about this month&rsquo;s rotating specialty drink.</p>
+              <p class="product-card__price">$5.50</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn--add" data-add-to-cart="specialty-espresso"
+                        aria-label="Add Specialty Espresso Drink to cart">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  Add to Cart
+                </button>
+                <a class="ask-link"
+                   href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20What%27s%20this%20month%27s%20Specialty%20Espresso%20Drink%3F"
+                   target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+                  Ask
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    
+    <!-- ===================== ALLERGEN MATRIX ===================== -->
+<section class="allergens" id="allergens" aria-labelledby="allergens-heading">
+  <div class="container">
+
+    <div class="allergens__intro">
+      <span class="allergens__eyebrow">Allergen Information</span>
+      <h2 class="allergens__title" id="allergens-heading">What&rsquo;s in each item</h2>
+      <p class="allergens__subtitle">
+        A quick reference for the allergens present in each of our products. If in doubt, ask us on WhatsApp before ordering.
+      </p>
+    </div>
+
+    
+      <div class="allergen-cards">
+
+  <article class="allergen-card">
+    <h3 class="allergen-card__name">Sourdough Croissant</h3>
+    <div>
+      <p class="allergen-card__label">Contains</p>
+      <ul class="allergen-card__list">
+        <li><span class="allergen-card__chip">Wheat</span></li>
+        <li><span class="allergen-card__chip">Dairy</span></li>
+        <li><span class="allergen-card__chip">Eggs</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="allergen-card">
+    <h3 class="allergen-card__name">Vegan Sourdough Croissant</h3>
+    <div>
+      <p class="allergen-card__label">Contains</p>
+      <ul class="allergen-card__list">
+        <li><span class="allergen-card__chip">Wheat</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="allergen-card">
+    <h3 class="allergen-card__name">Pain au Chocolat</h3>
+    <div>
+      <p class="allergen-card__label">Contains</p>
+      <ul class="allergen-card__list">
+        <li><span class="allergen-card__chip">Wheat</span></li>
+        <li><span class="allergen-card__chip">Dairy</span></li>
+        <li><span class="allergen-card__chip">Eggs</span></li>
+        <li><span class="allergen-card__chip">Soy</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="allergen-card">
+    <h3 class="allergen-card__name">Twice-Baked Almond Cardamom Croissant</h3>
+    <div>
+      <p class="allergen-card__label">Contains</p>
+      <ul class="allergen-card__list">
+        <li><span class="allergen-card__chip">Wheat</span></li>
+        <li><span class="allergen-card__chip">Dairy</span></li>
+        <li><span class="allergen-card__chip">Eggs</span></li>
+        <li><span class="allergen-card__chip">Nuts</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="allergen-card">
+    <h3 class="allergen-card__name">Fruit Tart</h3>
+    <div>
+      <p class="allergen-card__label">Contains</p>
+      <ul class="allergen-card__list">
+        <li><span class="allergen-card__chip">Wheat</span></li>
+        <li><span class="allergen-card__chip">Dairy</span></li>
+        <li><span class="allergen-card__chip">Eggs</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="allergen-card">
+    <h3 class="allergen-card__name">Seasonal Galette</h3>
+    <div>
+      <p class="allergen-card__label">Contains</p>
+      <ul class="allergen-card__list">
+        <li><span class="allergen-card__chip">Wheat</span></li>
+        <li><span class="allergen-card__chip">Dairy</span></li>
+        <li><span class="allergen-card__chip">Eggs</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="allergen-card">
+    <h3 class="allergen-card__name">Salted Caramel Espresso Macaron</h3>
+    <div>
+      <p class="allergen-card__label">Contains</p>
+      <ul class="allergen-card__list">
+        <li><span class="allergen-card__chip">Dairy</span></li>
+        <li><span class="allergen-card__chip">Eggs</span></li>
+        <li><span class="allergen-card__chip">Nuts</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="allergen-card">
+    <h3 class="allergen-card__name">Macaron Box (6)</h3>
+    <div>
+      <p class="allergen-card__label">Contains</p>
+      <ul class="allergen-card__list">
+        <li><span class="allergen-card__chip">Dairy</span></li>
+        <li><span class="allergen-card__chip">Eggs</span></li>
+        <li><span class="allergen-card__chip">Nuts</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="allergen-card">
+    <h3 class="allergen-card__name">Signature Layer Cake</h3>
+    <div>
+      <p class="allergen-card__label">Contains</p>
+      <ul class="allergen-card__list">
+        <li><span class="allergen-card__chip">Wheat</span></li>
+        <li><span class="allergen-card__chip">Dairy</span></li>
+        <li><span class="allergen-card__chip">Eggs</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="allergen-card">
+    <h3 class="allergen-card__name">Gluten-Friendly Flourless Chocolate Cake</h3>
+    <div>
+      <p class="allergen-card__label">Contains</p>
+      <ul class="allergen-card__list">
+        <li><span class="allergen-card__chip">Dairy</span></li>
+        <li><span class="allergen-card__chip">Eggs</span></li>
+        <li><span class="allergen-card__chip">Soy</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="allergen-card">
+    <h3 class="allergen-card__name">Espresso / Cappuccino / Flat White</h3>
+    <div>
+      <p class="allergen-card__label">Contains</p>
+      <ul class="allergen-card__list">
+        <li><span class="allergen-card__chip">Dairy</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="allergen-card">
+    <h3 class="allergen-card__name">Specialty Espresso Drink</h3>
+    <div>
+      <p class="allergen-card__label">Contains</p>
+      <ul class="allergen-card__list">
+        <li><span class="allergen-card__chip">Dairy</span></li>
+      </ul>
+    </div>
+  </article>
+
+</div>
+
+  
+
+    <p class="allergens__disclaimer">
+      <strong>Kitchen notice:</strong> Our kitchen handles wheat, dairy, eggs, nuts, and soy. While we take cross-contamination seriously, we cannot guarantee any item is completely free of these allergens.
+    </p>
+
+  </div>
+</section>
+
+<!-- ===================== ORDERING REMINDER ===================== -->
+<section class="order-reminder" aria-labelledby="order-reminder-heading">
+  <div class="container">
+    <div class="order-reminder__inner">
+
+      <div class="order-reminder__content">
+        <h2 class="order-reminder__title" id="order-reminder-heading">Ready to order?</h2>
+        <p class="order-reminder__text">
+          Add what you&rsquo;d like to your cart, then send the order to us on WhatsApp. We&rsquo;ll confirm availability, timing, and the final total in chat.
+        </p>
+        <ul class="order-reminder__facts">
+          <li class="order-reminder__fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6L9 17l-5-5"/>
+            </svg>
+            Pickup free on Maple Street
+          </li>
+          <li class="order-reminder__fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6L9 17l-5-5"/>
+            </svg>
+            Delivery within 5 km, $8 flat
+          </li>
+          <li class="order-reminder__fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6L9 17l-5-5"/>
+            </svg>
+            Cash or Mobile Money
+          </li>
+        </ul>
+      </div>
+
+      <a href="how-to-order.html" class="btn btn--cream">How to Order</a>
+
+    </div>
+  </div>
+</section>
+
+
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-brand__logo" aria-label="Velvet and Crumb — home">
+            <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+              <circle cx="20" cy="20" r="19" fill="none" stroke="#B08D57" stroke-width="1.5"/>
+              <path d="M12 26c2-8 6-12 8-12s6 4 8 12" fill="none" stroke="#FAF6EF" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="20" cy="15" r="2" fill="#B08D57"/>
+            </svg>
+            <span class="footer-brand__name">
+              Velvet &amp; Crumb
+              <small>Artisan Bakery</small>
+            </span>
+          </a>
+          <p class="footer-brand__blurb">
+            Handcrafted pastries, everyday luxuries. 48-hour fermented, baked fresh each morning on Maple Street.
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer">
+          <h2 class="footer-heading">Explore</h2>
+          <ul class="footer-nav__list">
+            <li><a class="footer-nav__link" href="menu.html">Menu</a></li>
+            <li><a class="footer-nav__link" href="custom-cakes.html">Custom Cakes</a></li>
+            <li><a class="footer-nav__link" href="how-to-order.html">How to Order</a></li>
+            <li><a class="footer-nav__link" href="about.html">About</a></li>
+            <li><a class="footer-nav__link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="footer-heading">Visit &amp; Contact</h2>
+          <address class="footer-visit">
+            142 Maple Street<br>
+            Downtown district
+          </address>
+          <p class="footer-hours"><strong>Mon – Fri</strong>7:00 AM – 6:00 PM</p>
+          <p class="footer-hours"><strong>Sat – Sun</strong>8:00 AM – 3:00 PM</p>
+          <div class="footer-contact">
+            <a class="footer-contact__link" href="mailto:velvet@me.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              velvet@me.com
+            </a>
+            <a class="btn--whatsapp-sm"
+               href="https://wa.me/233209133011?text=Hi%20Velvet%20%26%20Crumb!%20I%27d%20like%20to%20place%20an%20order."
+               target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 12.2 12.2 0 0 0 4.7 4.1 15 15 0 0 0 1.6.6 3.7 3.7 0 0 0 1.7.1 2.9 2.9 0 0 0 1.9-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+              Order on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <p class="footer-allergen">
+        <strong>Allergen notice:</strong> Our kitchen handles wheat, dairy, eggs, nuts, and soy. We cannot guarantee any item is completely free of these allergens.
+      </p>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="footer-year">2026</span> Velvet &amp; Crumb Artisan Bakery. All rights reserved.
+        </p>
+        <ul class="footer-legal">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+  
+</body>
+</html>
